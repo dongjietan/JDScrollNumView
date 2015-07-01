@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69E806DF1B442C5C005975C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E806DE1B442C5C005975C6 /* main.m */; };
+		69E806E21B442C5C005975C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E806E11B442C5C005975C6 /* AppDelegate.m */; };
+		69E806E51B442C5C005975C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E806E41B442C5C005975C6 /* ViewController.m */; };
+		69E806E81B442C5C005975C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E806E61B442C5C005975C6 /* Main.storyboard */; };
+		69E806EA1B442C5C005975C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E806E91B442C5C005975C6 /* Images.xcassets */; };
+		69E806ED1B442C5C005975C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E806EB1B442C5C005975C6 /* LaunchScreen.xib */; };
+		69E806F91B442C5C005975C6 /* JDScrollNumViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E806F81B442C5C005975C6 /* JDScrollNumViewTests.m */; };
+		69E8070A1B442D20005975C6 /* JDScrollNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E807031B442D20005975C6 /* JDScrollNumView.m */; };
+		69E8070B1B442D20005975C6 /* bj_numbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E807041B442D20005975C6 /* bj_numbg.png */; };
+		69E8070C1B442D20005975C6 /* bj_numbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E807051B442D20005975C6 /* bj_numbg@2x.png */; };
+		69E8070D1B442D20005975C6 /* money_bg_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E807061B442D20005975C6 /* money_bg_mask.png */; };
+		69E8070E1B442D20005975C6 /* money_bg_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E807071B442D20005975C6 /* money_bg_mask@2x.png */; };
+		69E8070F1B442D20005975C6 /* money_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E807081B442D20005975C6 /* money_bg.png */; };
+		69E807101B442D20005975C6 /* money_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E807091B442D20005975C6 /* money_bg@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69E806F31B442C5C005975C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69E806D11B442C5C005975C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69E806D81B442C5C005975C6;
+			remoteInfo = JDScrollNumView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69E806D91B442C5C005975C6 /* JDScrollNumView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDScrollNumView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E806DD1B442C5C005975C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69E806DE1B442C5C005975C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		69E806E01B442C5C005975C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		69E806E11B442C5C005975C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		69E806E31B442C5C005975C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		69E806E41B442C5C005975C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		69E806E71B442C5C005975C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69E806E91B442C5C005975C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		69E806EC1B442C5C005975C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		69E806F21B442C5C005975C6 /* JDScrollNumViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDScrollNumViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E806F71B442C5C005975C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69E806F81B442C5C005975C6 /* JDScrollNumViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDScrollNumViewTests.m; sourceTree = "<group>"; };
+		69E807021B442D20005975C6 /* JDScrollNumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDScrollNumView.h; sourceTree = "<group>"; };
+		69E807031B442D20005975C6 /* JDScrollNumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDScrollNumView.m; sourceTree = "<group>"; };
+		69E807041B442D20005975C6 /* bj_numbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bj_numbg.png; sourceTree = "<group>"; };
+		69E807051B442D20005975C6 /* bj_numbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bj_numbg@2x.png"; sourceTree = "<group>"; };
+		69E807061B442D20005975C6 /* money_bg_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_bg_mask.png; sourceTree = "<group>"; };
+		69E807071B442D20005975C6 /* money_bg_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money_bg_mask@2x.png"; sourceTree = "<group>"; };
+		69E807081B442D20005975C6 /* money_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_bg.png; sourceTree = "<group>"; };
+		69E807091B442D20005975C6 /* money_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money_bg@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69E806D61B442C5C005975C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69E806EF1B442C5C005975C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69E806D01B442C5C005975C6 = {
+			isa = PBXGroup;
+			children = (
+				69E806DB1B442C5C005975C6 /* JDScrollNumView */,
+				69E806F51B442C5C005975C6 /* JDScrollNumViewTests */,
+				69E806DA1B442C5C005975C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69E806DA1B442C5C005975C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69E806D91B442C5C005975C6 /* JDScrollNumView.app */,
+				69E806F21B442C5C005975C6 /* JDScrollNumViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69E806DB1B442C5C005975C6 /* JDScrollNumView */ = {
+			isa = PBXGroup;
+			children = (
+				69E807021B442D20005975C6 /* JDScrollNumView.h */,
+				69E807031B442D20005975C6 /* JDScrollNumView.m */,
+				69E807041B442D20005975C6 /* bj_numbg.png */,
+				69E807051B442D20005975C6 /* bj_numbg@2x.png */,
+				69E807061B442D20005975C6 /* money_bg_mask.png */,
+				69E807071B442D20005975C6 /* money_bg_mask@2x.png */,
+				69E807081B442D20005975C6 /* money_bg.png */,
+				69E807091B442D20005975C6 /* money_bg@2x.png */,
+				69E806E01B442C5C005975C6 /* AppDelegate.h */,
+				69E806E11B442C5C005975C6 /* AppDelegate.m */,
+				69E806E31B442C5C005975C6 /* ViewController.h */,
+				69E806E41B442C5C005975C6 /* ViewController.m */,
+				69E806E61B442C5C005975C6 /* Main.storyboard */,
+				69E806E91B442C5C005975C6 /* Images.xcassets */,
+				69E806EB1B442C5C005975C6 /* LaunchScreen.xib */,
+				69E806DC1B442C5C005975C6 /* Supporting Files */,
+			);
+			path = JDScrollNumView;
+			sourceTree = "<group>";
+		};
+		69E806DC1B442C5C005975C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69E806DD1B442C5C005975C6 /* Info.plist */,
+				69E806DE1B442C5C005975C6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69E806F51B442C5C005975C6 /* JDScrollNumViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				69E806F81B442C5C005975C6 /* JDScrollNumViewTests.m */,
+				69E806F61B442C5C005975C6 /* Supporting Files */,
+			);
+			path = JDScrollNumViewTests;
+			sourceTree = "<group>";
+		};
+		69E806F61B442C5C005975C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69E806F71B442C5C005975C6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69E806D81B442C5C005975C6 /* JDScrollNumView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69E806FC1B442C5C005975C6 /* Build configuration list for PBXNativeTarget "JDScrollNumView" */;
+			buildPhases = (
+				69E806D51B442C5C005975C6 /* Sources */,
+				69E806D61B442C5C005975C6 /* Frameworks */,
+				69E806D71B442C5C005975C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDScrollNumView;
+			productName = JDScrollNumView;
+			productReference = 69E806D91B442C5C005975C6 /* JDScrollNumView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69E806F11B442C5C005975C6 /* JDScrollNumViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69E806FF1B442C5C005975C6 /* Build configuration list for PBXNativeTarget "JDScrollNumViewTests" */;
+			buildPhases = (
+				69E806EE1B442C5C005975C6 /* Sources */,
+				69E806EF1B442C5C005975C6 /* Frameworks */,
+				69E806F01B442C5C005975C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69E806F41B442C5C005975C6 /* PBXTargetDependency */,
+			);
+			name = JDScrollNumViewTests;
+			productName = JDScrollNumViewTests;
+			productReference = 69E806F21B442C5C005975C6 /* JDScrollNumViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69E806D11B442C5C005975C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = ithooks;
+				TargetAttributes = {
+					69E806D81B442C5C005975C6 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					69E806F11B442C5C005975C6 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 69E806D81B442C5C005975C6;
+					};
+				};
+			};
+			buildConfigurationList = 69E806D41B442C5C005975C6 /* Build configuration list for PBXProject "JDScrollNumView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69E806D01B442C5C005975C6;
+			productRefGroup = 69E806DA1B442C5C005975C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69E806D81B442C5C005975C6 /* JDScrollNumView */,
+				69E806F11B442C5C005975C6 /* JDScrollNumViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69E806D71B442C5C005975C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E807101B442D20005975C6 /* money_bg@2x.png in Resources */,
+				69E806E81B442C5C005975C6 /* Main.storyboard in Resources */,
+				69E8070D1B442D20005975C6 /* money_bg_mask.png in Resources */,
+				69E806ED1B442C5C005975C6 /* LaunchScreen.xib in Resources */,
+				69E8070E1B442D20005975C6 /* money_bg_mask@2x.png in Resources */,
+				69E8070C1B442D20005975C6 /* bj_numbg@2x.png in Resources */,
+				69E806EA1B442C5C005975C6 /* Images.xcassets in Resources */,
+				69E8070B1B442D20005975C6 /* bj_numbg.png in Resources */,
+				69E8070F1B442D20005975C6 /* money_bg.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69E806F01B442C5C005975C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69E806D51B442C5C005975C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E806E51B442C5C005975C6 /* ViewController.m in Sources */,
+				69E806E21B442C5C005975C6 /* AppDelegate.m in Sources */,
+				69E806DF1B442C5C005975C6 /* main.m in Sources */,
+				69E8070A1B442D20005975C6 /* JDScrollNumView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69E806EE1B442C5C005975C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E806F91B442C5C005975C6 /* JDScrollNumViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69E806F41B442C5C005975C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69E806D81B442C5C005975C6 /* JDScrollNumView */;
+			targetProxy = 69E806F31B442C5C005975C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69E806E61B442C5C005975C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69E806E71B442C5C005975C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69E806EB1B442C5C005975C6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69E806EC1B442C5C005975C6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69E806FA1B442C5C005975C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69E806FB1B442C5C005975C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69E806FD1B442C5C005975C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JDScrollNumView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		69E806FE1B442C5C005975C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JDScrollNumView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		69E807001B442C5C005975C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JDScrollNumViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDScrollNumView.app/JDScrollNumView";
+			};
+			name = Debug;
+		};
+		69E807011B442C5C005975C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JDScrollNumViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDScrollNumView.app/JDScrollNumView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69E806D41B442C5C005975C6 /* Build configuration list for PBXProject "JDScrollNumView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69E806FA1B442C5C005975C6 /* Debug */,
+				69E806FB1B442C5C005975C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69E806FC1B442C5C005975C6 /* Build configuration list for PBXNativeTarget "JDScrollNumView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69E806FD1B442C5C005975C6 /* Debug */,
+				69E806FE1B442C5C005975C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69E806FF1B442C5C005975C6 /* Build configuration list for PBXNativeTarget "JDScrollNumViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69E807001B442C5C005975C6 /* Debug */,
+				69E807011B442C5C005975C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69E806D11B442C5C005975C6 /* Project object */;
+}
