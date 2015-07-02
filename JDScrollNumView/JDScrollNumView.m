@@ -33,63 +33,103 @@
         return;
     }
     
-    NSMutableString *str = [NSMutableString stringWithFormat:@"%d", last];
+    NSString *str = [NSString stringWithFormat:@"%d", last];
     int count = 1;
     if (aDigit > last) {
         for (int i = last + 1; i < aDigit + 1; ++i) {
             ++count;
-            [str appendFormat:@"\n%d", i];
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
         }
     }
     else {
         for (int i = last + 1; i < 10; ++i) {
             ++count;
-            [str appendFormat:@"\n%d", i];
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
         }
         for (int i = 0; i < aDigit + 1; ++i) {
             ++count;
-            [str appendFormat:@"\n%d", i];
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
         }
     }
     
     self.label.text = str;
     CGRect rect = self.label.frame;
-    rect.origin.y = 0;
     rect.size.height = _oneDigitHeight * count;
+    rect.origin.y = _oneDigitHeight - rect.size.height;
     self.label.frame = rect;
     digit = aDigit;
 }
+
+//循环滚动
+- (void)setDigit:(NSUInteger)aDigit from:(NSUInteger)last cycle:(NSUInteger)cycle{
+    NSString *str = [NSString stringWithFormat:@"%d", last];
+    int count = 1;
+    for (int j = 0; j < 2; ++j) {
+        for (int i = last + 1; i < 10; ++i) {
+            ++count;
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
+        }
+        for (int i = 0; i < last + 1; ++i) {
+            ++count;
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
+        }
+    }
+    if (aDigit > last) {
+        for (int i = last + 1; i < aDigit + 1; ++i) {
+            ++count;
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
+        }
+    }
+    else {
+        for (int i = last + 1; i < 10; ++i) {
+            ++count;
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
+        }
+        for (int i = 0; i < aDigit + 1; ++i) {
+            ++count;
+            str = [NSString stringWithFormat:@"%d\n%@", i, str];
+        }
+    }
+    
+    self.label.text = str;
+    CGRect rect = self.label.frame;
+    rect.size.height = _oneDigitHeight * count;
+    rect.origin.y = _oneDigitHeight - rect.size.height;
+    self.label.frame = rect;
+    digit = aDigit;
+}
+
 
 - (void)setDigitFromLast:(NSUInteger)aDigit {
     [self setDigit:aDigit from:self.digit];
 }
 
 - (void)setDigitFast:(NSUInteger)aDigit{
-    self.label.text = [NSString stringWithFormat:@"%d\n%d", self.digit, aDigit];
+    self.label.text = [NSString stringWithFormat:@"%d\n%d", aDigit, self.digit];
     CGRect rect = self.label.frame;
-    rect.origin.y = 0;
     rect.size.height = _oneDigitHeight * 2;
+    rect.origin.y = _oneDigitHeight - rect.size.height;
     self.label.frame = rect;
     digit = aDigit;
 }
 
 - (void)setRandomScrollDigit:(NSUInteger)aDigit length:(NSUInteger)length{
-    NSMutableString *str = [NSMutableString stringWithFormat:@"%d", self.digit];
+    NSString *str = [NSString stringWithFormat:@"%d", self.digit];
     for (int i = 1; i < length - 1; ++i) {
-        [str appendFormat:@"\n%d", rand() % 10];
+        str = [NSString stringWithFormat:@"%d\n%@", rand() % 10, str];
     }
-    [str appendFormat:@"\n%d", aDigit];
+    str = [NSString stringWithFormat:@"%d\n%@", aDigit, str];
     self.label.text = str;
     CGRect rect = self.label.frame;
-    rect.origin.y = 0;
     rect.size.height = _oneDigitHeight * length;
+    rect.origin.y = _oneDigitHeight - rect.size.height;
     self.label.frame = rect;
     digit = aDigit;
 }
 
 - (void)commitChange{
     CGRect rect = self.label.frame;
-    rect.origin.y = _oneDigitHeight - rect.size.height;
+    rect.origin.y = 0;
     self.label.frame = rect;
 }
 
@@ -191,6 +231,23 @@
     }
     [UIView commitAnimations];
     numberValue = number;
+}
+
+- (void)setNumber:(NSUInteger)number animationTime:(NSTimeInterval)timeSpan cycle:(NSUInteger)cycle{
+    for (int i = 0; i < numberSize; ++i) {
+        JDScrollDigitView *digitView = [_numberViews objectAtIndex:i];
+        NSUInteger digit = [JDScrollNumView digitFromNum:number withIndex:i];
+        [digitView setDigit:digit from:0 cycle:cycle];
+        
+        NSTimeInterval delayTime = 0.5f * (numberSize - i - 1);
+        [UIView animateKeyframesWithDuration:timeSpan delay:delayTime options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^(void){
+            [digitView commitChange];
+        } completion:^(BOOL finished){
+            if (i == numberSize - 1) {
+                numberValue = number;
+            }
+        }];
+    }
 }
 
 + (NSUInteger)digitFromNum:(NSUInteger)number withIndex:(NSUInteger)index {

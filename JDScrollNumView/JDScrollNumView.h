@@ -13,7 +13,8 @@ typedef NS_ENUM(NSInteger,JDScrollNumAnimationType){
     JDScrollNumAnimationTypeNormal,
     JDScrollNumAnimationTypeFromLast,
     JDScrollNumAnimationTypeRand,
-    JDScrollNumAnimationTypeFast
+    JDScrollNumAnimationTypeFast,
+    JDScrollNumAnimationTypeCycleInTurn,
 };
 
 @interface JDScrollDigitView : UIView {
@@ -52,6 +53,6 @@ typedef NS_ENUM(NSInteger,JDScrollNumAnimationType){
 @property (strong, nonatomic) UIColor *digitColor;  //号码颜色
 @property (nonatomic) NSUInteger randomLength;
 - (void)setNumber:(NSUInteger)number withAnimationType:(JDScrollNumAnimationType)type animationTime:(NSTimeInterval)timeSpan;
-
+- (void)setNumber:(NSUInteger)number animationTime:(NSTimeInterval)timeSpan cycle:(NSUInteger)cycle;
 - (void)didConfigFinish;
 @end

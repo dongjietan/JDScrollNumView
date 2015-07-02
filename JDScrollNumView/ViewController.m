@@ -61,24 +61,27 @@
 }
 
 - (IBAction)none:(id)sender {
-    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeNone animationTime:0.1];
+    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeNone animationTime:10.1];
 }
 
 - (IBAction)fromZero:(id)sender {
-    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeNormal animationTime:0.3];
+    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeNormal animationTime:10.3];
 }
 
 - (IBAction)fromLast:(id)sender {
-    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeFromLast animationTime:0.3];
+    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeFromLast animationTime:10.3];
 }
 
 - (IBAction)fast:(id)sender {
-    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeFast animationTime:0.1];
+    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeFast animationTime:10.1];
 }
 
 - (IBAction)random:(id)sender {
-    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeRand animationTime:3];
+    [self.scrollNumber setNumber:rand() withAnimationType:JDScrollNumAnimationTypeRand animationTime:13];
 }
 
+- (IBAction)cycleInTurn:(id)sender {
+    [self.scrollNumber setNumber:rand() animationTime:6 cycle:2];
+}
 
 @end
