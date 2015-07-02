@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JDScrollNumViewDelegate <NSObject>
+- (void)animationFinished;
+@end
+
 typedef NS_ENUM(NSInteger,JDScrollNumAnimationType){
     JDScrollNumAnimationTypeNone,
     JDScrollNumAnimationTypeNormal,
@@ -52,6 +56,8 @@ typedef NS_ENUM(NSInteger,JDScrollNumAnimationType){
 @property (readonly, nonatomic) NSArray *numberViews;
 @property (strong, nonatomic) UIColor *digitColor;  //号码颜色
 @property (nonatomic) NSUInteger randomLength;
+@property (nonatomic, weak) id<JDScrollNumViewDelegate> delegate;
+
 - (void)setNumber:(NSUInteger)number withAnimationType:(JDScrollNumAnimationType)type animationTime:(NSTimeInterval)timeSpan;
 - (void)setNumber:(NSUInteger)number animationTime:(NSTimeInterval)timeSpan cycle:(NSUInteger)cycle;
 - (void)didConfigFinish;

@@ -245,6 +245,9 @@
         } completion:^(BOOL finished){
             if (i == numberSize - 1) {
                 numberValue = number;
+                if (self.delegate && [self.delegate respondsToSelector:@selector(animationFinished)]) {
+                    [self.delegate performSelector:@selector(animationFinished)];
+                }
             }
         }];
     }
