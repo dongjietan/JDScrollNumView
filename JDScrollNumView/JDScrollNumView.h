@@ -38,18 +38,18 @@ typedef NS_ENUM(NSInteger,JDScrollNumAnimationType){
 @end
 
 @interface JDScrollNumView : UIView {
-    NSMutableArray *_numberViews;
+    NSMutableArray *_numberViews;   //号码数组
 }
 
-@property (nonatomic) NSUInteger numberSize;
-@property (nonatomic) CGFloat splitSpaceWidth;
-@property (nonatomic) CGFloat topAndBottomPadding;
+@property (nonatomic) NSUInteger numberSize;    //号码位数
+@property (nonatomic) CGFloat splitSpaceWidth;  //水平间距
+@property (nonatomic) CGFloat topAndBottomPadding; //上下padding
 @property (readonly, nonatomic) NSUInteger numberValue;
-@property (strong, nonatomic) UIView *backgroundView;
-@property (strong, nonatomic) UIView *digitBackgroundView;
-@property (strong, nonatomic) UIFont *digitFont;
+@property (strong, nonatomic) UIView *backgroundView;       //背景
+@property (strong, nonatomic) UIView *digitBackgroundView;  //数字背景
+@property (strong, nonatomic) UIFont *digitFont;    //号码字体
 @property (readonly, nonatomic) NSArray *numberViews;
-@property (strong, nonatomic) UIColor *digitColor;
+@property (strong, nonatomic) UIColor *digitColor;  //号码颜色
 @property (nonatomic) NSUInteger randomLength;
 - (void)setNumber:(NSUInteger)number withAnimationType:(JDScrollNumAnimationType)type animationTime:(NSTimeInterval)timeSpan;
 

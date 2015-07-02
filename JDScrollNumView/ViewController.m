@@ -22,9 +22,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    CGRect tmp = {{0, 0}, {100, 100}};
     UIImage *image = [[UIImage imageNamed:@"bj_numbg"] stretchableImageWithLeftCapWidth:10 topCapHeight:14];
 //    self.scrollNumber.backgroundView = [[UIImageView alloc] initWithImage:image];
+    
+    CGRect tmp = {{0, 0}, {100, 100}};
     UIView *digitBackView = [[UIView alloc] initWithFrame:tmp];
     digitBackView.backgroundColor = [UIColor clearColor];
     digitBackView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;

@@ -23,7 +23,6 @@
     CGRect rect = self.label.frame;
     rect.origin.y = 0;
     rect.size.height = _oneDigitHeight;
-    self.label.numberOfLines = 1;
     self.label.frame = rect;
     digit = aDigit;
 }
@@ -33,6 +32,7 @@
         [self setDigitAndCommit:aDigit];
         return;
     }
+    
     NSMutableString *str = [NSMutableString stringWithFormat:@"%d", last];
     int count = 1;
     if (aDigit > last) {
@@ -40,7 +40,8 @@
             ++count;
             [str appendFormat:@"\n%d", i];
         }
-    } else {
+    }
+    else {
         for (int i = last + 1; i < 10; ++i) {
             ++count;
             [str appendFormat:@"\n%d", i];
@@ -50,8 +51,8 @@
             [str appendFormat:@"\n%d", i];
         }
     }
+    
     self.label.text = str;
-    self.label.numberOfLines = count;
     CGRect rect = self.label.frame;
     rect.origin.y = 0;
     rect.size.height = _oneDigitHeight * count;
@@ -61,12 +62,10 @@
 
 - (void)setDigitFromLast:(NSUInteger)aDigit {
     [self setDigit:aDigit from:self.digit];
-    
 }
 
 - (void)setDigitFast:(NSUInteger)aDigit{
     self.label.text = [NSString stringWithFormat:@"%d\n%d", self.digit, aDigit];
-    self.label.numberOfLines = 2;
     CGRect rect = self.label.frame;
     rect.origin.y = 0;
     rect.size.height = _oneDigitHeight * 2;
@@ -81,7 +80,6 @@
     }
     [str appendFormat:@"\n%d", aDigit];
     self.label.text = str;
-    self.label.numberOfLines = length;
     CGRect rect = self.label.frame;
     rect.origin.y = 0;
     rect.size.height = _oneDigitHeight * length;
@@ -90,14 +88,12 @@
 }
 
 - (void)commitChange{
-
     CGRect rect = self.label.frame;
     rect.origin.y = _oneDigitHeight - rect.size.height;
     self.label.frame = rect;
 }
 
 - (void)didConfigFinish{
-    
     if (self.backgroundView == nil) {
         self.backgroundView = [[UIView alloc] init];
         self.backgroundView.backgroundColor = [UIColor grayColor];
@@ -105,8 +101,8 @@
     CGRect backrect = {{0, 0}, self.frame.size};
     self.backgroundView.frame = backrect;
     [self addSubview:self.backgroundView];
-
-    CGSize size= [@"8" sizeWithFont:self.digitFont];
+ 
+    CGSize size = [@"8" sizeWithAttributes:@{NSFontAttributeName: self.digitFont}];
     
     _oneDigitHeight = size.height;
     
@@ -119,6 +115,7 @@
     self.label = [[UILabel alloc] initWithFrame:rect];
     self.label.font = self.digitFont;
     self.label.backgroundColor = [UIColor clearColor];
+    self.label.numberOfLines = 0;
     [view addSubview:self.label];
     [self addSubview:view];
     [self setDigitAndCommit:self.digit];
@@ -132,11 +129,7 @@
 @synthesize numberSize;
 @synthesize numberValue;
 @synthesize backgroundView;
-@synthesize digitBackgroundView;
-@synthesize digitFont;
 @synthesize numberViews = _numberViews;
-@synthesize splitSpaceWidth;
-@synthesize topAndBottomPadding;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -211,7 +204,6 @@
 
 - (NSUInteger)digitIndex:(NSUInteger)index {
     return [JDScrollNumView digitFromNum:self.numberValue withIndex:index];
-    
 }
 
 - (void)didConfigFinish {
@@ -220,7 +212,7 @@
     [self addSubview:self.backgroundView];
     _numberViews = [[NSMutableArray alloc] initWithCapacity:self.numberSize];
     CGFloat allWidth = self.frame.size.width;
-    CGFloat digitWidth = (allWidth - (self.numberSize + 1) * splitSpaceWidth) / self.numberSize;
+    CGFloat digitWidth = (allWidth - (self.numberSize + 1) * self.splitSpaceWidth) / self.numberSize;
     NSData *digitBackgroundViewData = [NSKeyedArchiver archivedDataWithRootObject:self.digitBackgroundView];
     for (int i = 0; i < numberSize; ++i) {
         CGRect rect = {{allWidth - (digitWidth + self.splitSpaceWidth) * (i + 1), self.topAndBottomPadding}, {digitWidth, self.frame.size.height - self.topAndBottomPadding * 2}};
